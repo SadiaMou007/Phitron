@@ -1,6 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    printf("Hello World!!!");
+    int e;
+
+    scanf("%d",&e);
+    printf("%d\n",e);
+    printf("vv\n");
     return 0;
 }
