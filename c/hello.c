@@ -1,10 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int e;
+    int e=1000000000;
 
-    scanf("%d",&e);
+    // scanf("%d",&e);
     printf("%d\n",e);
-    printf("vv\n");
     return 0;
 }
