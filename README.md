@@ -2,6 +2,12 @@
 
 - \n - newline
 - \t - tab
+- Snippet generate :
+
+  1.  Generate snippet from [snippet generate](https://snippet-generator.app/?description=&tabtrigger=&snippet=%23include%3Cstdio.h%3E%0Aint+main%28%29%0A%7B%0A++++return+0%3B%0A%7D&mode=vscode)
+
+  2.  settings - user snippet - paste snippet
+  3.  Add prefix and initial point using "$0",
 
 ### Range and Format specifier
 
