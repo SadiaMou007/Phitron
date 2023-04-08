@@ -15,4 +15,4 @@
 - long long int (8 byte) - %lld range : `[20 digit: -10^18 to +10^18]`
 - float (4 byte) - %f, %0.2f range : `[6 digit]`
 - double (8 byte) - %lf, %0.2lf range : `[15 digit]`
-- char (4 byte) - %c
+- char (8 byte) - %c
