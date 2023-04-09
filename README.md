@@ -16,3 +16,5 @@
 - float (4 byte) - %f, %0.2f range : `[6 digit]`
 - double (8 byte) - %lf, %0.2lf range : `[15 digit]`
 - char (8 byte) - %c
+### Take input till EOF  
+- `  while(scanf("%d",&num) != EOF)`  
