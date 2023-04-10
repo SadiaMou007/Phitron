@@ -40,3 +40,11 @@ while(scanf("%d",&num) != EOF)
  int a = i++ [ a-10 ,i=11 (post increment of i)]
  int a = ++i [a=11 , i=11 (pre increment of i)]
 ```
+
+### max and min int
+
+```
+#include <limits.h>
+...
+int a= INT_MIN, b= INT_MAX
+```
