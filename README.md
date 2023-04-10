@@ -1,8 +1,5 @@
 # C
 
-- \n - newline
-- \t - tab
-<hr/>
 
 - Snippet generate :
 
