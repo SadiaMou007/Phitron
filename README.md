@@ -20,7 +20,7 @@
 
 <hr/>
 
-### Take input till EOF
+### take input till EOF
 
 ```
 while(scanf("%d",&num) != EOF)
@@ -28,7 +28,7 @@ while(scanf("%d",&num) != EOF)
 
 <hr/>
 
-### Post Increment and Pre Increment
+### post Increment and Pre Increment
 
 - In general i++ & ++i is same. Pre or Post increment matters when assign i to another variable.
 
