@@ -1,6 +1,5 @@
 # C
 
-
 - Snippet generate :
 
   1.  Generate snippet from [snippet generate](https://snippet-generator.app/?description=&tabtrigger=&snippet=%23include%3Cstdio.h%3E%0Aint+main%28%29%0A%7B%0A++++return+0%3B%0A%7D&mode=vscode)
@@ -45,3 +44,8 @@ while(scanf("%d",&num) != EOF)
 ...
 int a= INT_MIN, b= INT_MAX
 ```
+
+<hr/>
+
+- array size : `sizeof(arrName) / sizeof(int/char)`
+- string length: `int l= strlen(a)`
