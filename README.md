@@ -49,5 +49,5 @@ int a= INT_MIN, b= INT_MAX
 
 - array size : `sizeof(arrName) / sizeof(int/char)`
 - string length: `int l= strlen(a)`  
-- compare string: `int value = strcmp(a, b)` <b>value = -1  (a<b)</b> <b>value = 0  (a==b) </b> <b>value = 1  (a>b)</b>  
+- compare string: `int value = strcmp(a, b)` <b>value = -1  (a<b)</b> <b>value = 0  (a==b) </b> <b>value = 1  (a>b)</b>   
 
