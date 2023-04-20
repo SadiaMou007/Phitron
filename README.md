@@ -7,8 +7,6 @@
   2.  settings - user snippet - paste snippet
   3.  Add prefix and initial point using "$0",
 
-<hr/>
-
 ### <u>Range and Format specifier</u>
 
 - int (4 byte (1 byte - 8 bit)) - %d range : -2^32 -1 -> 2^32 -1 (2^4\*8 - 1) `[10 digit: -10^9 to +10^9]`
@@ -17,15 +15,11 @@
 - double (8 byte) - %lf, %0.2lf range : `[15 digit]`
 - char (8 byte) - %c
 
-<hr/>
-
 ### take input till EOF
 
 ```
 while(scanf("%d",&num) != EOF)
 ```
-
-<hr/>
 
 ### post Increment and Pre Increment
 
@@ -48,6 +42,6 @@ int a= INT_MIN, b= INT_MAX
 <hr/>
 
 - array size : `sizeof(arrName) / sizeof(int/char)`
-- string length: `int l= strlen(a)`  
-- compare string: `int value = strcmp(a, b)` <b>value = -1  (a<b)</b> <b>value = 0  (a==b) </b> <b>value = 1  (a>b)</b>   
-
+- string length: `int l= strlen(a)`
+- compare string: `int value = strcmp(a, b)` <i>value < 0 (a<b)</i>, <i>value = 0 (a==b) </i>, <i>value > 0 (a>b)</i>
+- concat string: strcat(a,b)
