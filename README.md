@@ -42,6 +42,8 @@ int a= INT_MIN, b= INT_MAX
 <hr/>
 
 - array size : `sizeof(arrName) / sizeof(int/char)`
-- string length: `int l= strlen(a)`
+- string length: `int l= strlen(a)`  
+- copy string: strcpy(a,b) `copy b to a`
 - compare string: `int value = strcmp(a, b)` <i>value < 0 (a<b)</i>, <i>value = 0 (a==b) </i>, <i>value > 0 (a>b)</i>
-- concat string: strcat(a,b)
+- concat string: strcat(a,b) `concat a & b to a`  
+
