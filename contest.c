@@ -1,4 +1,5 @@
 #include<stdio.h>
+//cc
 int main()
 {
     int n,min,p=1;
