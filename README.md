@@ -48,8 +48,9 @@ int a= INT_MIN, b= INT_MAX
 - concat string: strcat(a,b) `concat a & b to a`  
 
 <hr/>
-#### Counting array algorithm:  
-1. Array input a[n]
-2. initialize empty array `cnt[10]={0} (for number 0-9) || cnt[26]={0} (for char)`
-3. for i=0 to n `cnt[a[i]]++`
-4. print counting value according input or char order.
+### Counting array algorithm:  
+1. Array input a[n]  
+2. initialize empty array `cnt[10]={0} (for number 0-9) || cnt[26]={0} (for char)`  
+3. for i=0 to n `cnt[a[i]]++`  
+4. print counting value according input or char order.  
+
