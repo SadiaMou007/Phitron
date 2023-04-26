@@ -1,20 +1,21 @@
 #include<stdio.h>
-//cc
+#include<string.h>
 int main()
 {
-    int n,min,p=1;
-    scanf("%d",&n);
-    int arr[n];
-    for(int i =0;i <n;i++) scanf("%d",&arr[i]);
+    int cnt[26]={0};
+    char a[10001];
+    scanf("%s",a);
     
-     min=arr[0];
+    for (int i=0;i<strlen(a);i++) {
+        cnt[a[i]-'a']++;
+    }
+   
+    //print in alphabet order
+    for (int i=0;i<26;i++) {
+        printf("%c - %d\n",i+'a',cnt[i]);
+    }
 
-    for(int i =1;i <n;i++) 
-            if(arr[i] < min)  {
-                min = arr[i];
-                p=i+1;
-            }
+   
 
-     printf("%d %d\n",min,p);
     return 0;
 }
