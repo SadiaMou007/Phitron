@@ -42,15 +42,31 @@ int a= INT_MIN, b= INT_MAX
 <hr/>
 
 - array size : `sizeof(arrName) / sizeof(int/char)`
-- string length: `int l= strlen(a)`  
+- string length: `int l= strlen(a)`
 - copy string: strcpy(a,b) `copy b to a`
 - compare string: `int value = strcmp(a, b)` <i>value < 0 (a<b)</i>, <i>value = 0 (a==b) </i>, <i>value > 0 (a>b)</i>
-- concat string: strcat(a,b) `concat a & b to a`  
+- concat string: strcat(a,b) `concat a & b to a`
 
 <hr/>
-### Counting array algorithm:  
-1. Array input a[n]  
-2. initialize empty array `cnt[10]={0} (for number 0-9) || cnt[26]={0} (for char)`  
-3. for i=0 to n `cnt[a[i]]++`  
-4. print counting value according input or char order.  
 
+### Counting array algorithm:
+
+```
+
+1. Array input a[n]
+2. initialize empty array `cnt[10]={0} (for number 0-9) || cnt[26]={0} (for char)`
+3. for i=0 to n `cnt[a[i]]++`
+4. print counting value according input or char order.
+```
+
+### Pattern
+
+- take outer array > s for spaces && k for stars (initialize outside loop && inc/dec later) > break after every iteration
+
+### Selection sort Algorithm
+
+```
+1. for i=0 to i<n-1
+2. for j=i+1 to j<n
+3. if a[i]<a[j] --> swap
+```
