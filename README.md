@@ -41,21 +41,19 @@ int a= INT_MIN, b= INT_MAX
 
 <hr/>  
 ### <u>Build in Functions</u>  
-` Headerfiles --> #include<string.h> , #include<math.h> `  
-
+` Headerfiles --> #include<string.h> , #include<math.h> `
 
 - array size : `sizeof(arrName) / sizeof(int/char)`
 - string length: `int l= strlen(a)`
 - copy string: strcpy(a,b) `copy b to a`
 - compare string: `int value = strcmp(a, b)` <i>value < 0 (a<b)</i>, <i>value = 0 (a==b) </i>, <i>value > 0 (a>b)</i>
-- concat string: strcat(a,b) `concat a & b to a`  
-- ceil(v)  
-- floor(v)  
-- round(v)  
-- sqrt(v)  
-- pow(a,b)  
+- concat string: strcat(a,b) `concat a & b to a`
+- ceil(v)
+- floor(v)
+- round(v)
+- sqrt(v)
+- pow(a,b)
 - abs() [not works for long long int, headerfile --> #include<stdlib.h>]
-
 
 <hr/>
 
@@ -72,6 +70,11 @@ int a= INT_MIN, b= INT_MAX
 ### Pattern
 
 - take outer array > s for spaces && k for stars (initialize outside loop && inc/dec later) > break after every iteration
+
+### Pointer
+
+- call by value(pass value that store in another variable )
+- call by reference(pass address as param to change data by dereferencing)
 
 ### Selection sort Algorithm
 
