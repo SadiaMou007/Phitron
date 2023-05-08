@@ -74,7 +74,22 @@ int a= INT_MIN, b= INT_MAX
 ### Pointer
 
 - call by value(pass value that store in another variable )
-- call by reference(pass address as param to change data by dereferencing)
+- call by reference(pass address as param to change data by dereferencing)  
+### Matrix 
+- Diagonal: all 0 except primary & secondary diagonal. Diagonal value itself can be 0.   
+``` 
+primary diagonal values -> i+j = row - 1`  
+secondary diagonal values -> i = j
+
+```  
+- Scalar: all 0 except primary & secondary diagonal. Diagonal values are equal.     
+``` 
+secondary diagonal values -> i+j = row - 1`  
+primary diagonal values -> i = j
+
+```  
+
+
 
 ### Selection sort Algorithm
 
