@@ -1,4 +1,6 @@
-#include<stdio.h>
+// #include<stdio.h>
+#include<bits/stdc++.h>
+
 int main()
 {
     int n,s,k=1;

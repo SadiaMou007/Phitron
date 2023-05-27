@@ -74,22 +74,25 @@ int a= INT_MIN, b= INT_MAX
 ### Pointer
 
 - call by value(pass value that store in another variable )
-- call by reference(pass address as param to change data by dereferencing)  
-### Matrix 
-- Diagonal: all 0 except primary & secondary diagonal. Diagonal value itself can be 0.   
-``` 
-primary diagonal values -> i+j = row - 1`  
+- call by reference(pass address as param to change data by dereferencing)
+
+### Matrix
+
+- Diagonal: all 0 except primary & secondary diagonal. Diagonal value itself can be 0.
+
+```
+primary diagonal values -> i+j = row - 1`
 secondary diagonal values -> i = j
 
-```  
-- Scalar: all 0 except primary & secondary diagonal. Diagonal values are equal.     
-``` 
-secondary diagonal values -> i+j = row - 1`  
+```
+
+- Scalar: all 0 except primary & secondary diagonal. Diagonal values are equal.
+
+```
+secondary diagonal values -> i+j = row - 1`
 primary diagonal values -> i = j
 
-```  
-
-
+```
 
 ### Selection sort Algorithm
 
@@ -98,3 +101,21 @@ primary diagonal values -> i = j
 2. for j=i+1 to j<n
 3. if a[i]<a[j] --> swap
 ```
+
+# cpp
+
+- stack vs heap memory(can remove/change)
+- create data in dynamic memory: (stack memory store heap memory address )
+
+```
+int *a = new int
+*a = 10
+cout<<a<<*a //a--> memory address, *a-->10
+
+```
+
+## Dynamic array
+
+- Initialize: `int *a = new int[5]` (as array work's as pointer rest will work as normal array)
+- Increase size: initialize new array > copy old array value > delete old array
+- Delete: `delete[] a`--> delete entire array, `delete a`--> delete first index address
