@@ -119,3 +119,46 @@ cout<<a<<*a //a--> memory address, *a-->10
 - Initialize: `int *a = new int[5]` (as array work's as pointer rest will work as normal array)
 - Increase size: initialize new array > copy old array value > delete old array
 - Delete: `delete[] a`--> delete entire array, `delete a`--> delete first index address
+
+## String build in functions
+
+### Capacity
+
+| Function     | Description                                       |
+| ------------ | ------------------------------------------------- |
+| s.size()     | returns the size of the string.                   |
+| s.max_size() | returns the maximum size that string can hold.    |
+| s.capacity() | returns current available capacity of the string. |
+| s.clear()    | clear the string.                                 |
+| s.empty()    | return true/false if the string is empty.         |
+| s.resize()   | change the size of the string.                    |
+
+### Element access
+
+| Function  | Description                             |
+| --------- | --------------------------------------- |
+| S[i]      | access the ith index of the string.     |
+| s.at(i)   | access the ith index of the string.     |
+| s.back()  | access the last element of the string.  |
+| s.front() | access the first element of the string. |
+
+### Modifiers
+
+| Function                      | Description                              |
+| ----------------------------- | ---------------------------------------- |
+| s+= -> append another string. |
+| s.append()                    | append another string.                   |
+| s.push_back()                 | add character to the last of the string. |
+| s.pop_back()                  | remove the last character of the string. |
+| s=                            | assign string.                           |
+| s.assign()                    | assign string.                           |
+| s.erase()                     | erase characters from the string.        |
+| s.replace()                   | replace a portion of the string.         |
+| s.insert()                    | insert a portion to a specific position. |
+
+### Iterators
+
+| Function  | Description                                                       |
+| --------- | ----------------------------------------------------------------- |
+| s.begin() | pointer to the first element.                                     |
+| s.end()   | pointer to the next element after the last element of the string. |
