@@ -165,3 +165,47 @@ cout<<a<<*a //a--> memory address, *a-->10
 | --------- | ----------------------------------------------------------------- |
 | s.begin() | pointer to the first element.                                     |
 | s.end()   | pointer to the next element after the last element of the string. |
+
+#### Example 1: string iterator  
+```  
+int main() {
+  
+    string s;
+    //string :: iterator it; //can avoid using auto iteration [gnu 14+]
+    cin >> s;
+    
+    for(auto it = s.begin();it < s.end(); it++)
+    {
+        cout<< *it <<endl;
+    }
+    return 0;
+}
+```  
+#### Example 2: Ignore newline for multiple input (int , getline)  
+```  
+int a;
+cin >> a;
+cin.ignore(); //for cpp or getchar()  
+string s;  
+getline(cin,s);  
+```  
+#### Example 3: stringstream  
+
+```  
+int main() {
+  
+   string s;
+   getline(cin,s);
+   stringstream ss(s);
+   string word;
+   
+   while(ss >> word)
+   {
+       cout<<word<<endl;
+   }
+   
+    return 0;
+}  
+
+```  
+
