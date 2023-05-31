@@ -124,37 +124,39 @@ cout<<a<<*a //a--> memory address, *a-->10
 
 ### Capacity
 
-| Function     | Description                                       |
-| ------------ | ------------------------------------------------- |
-| s.size()     | returns the size of the string.                   |
-| s.max_size() | returns the maximum size that string can hold.    |
-| s.capacity() | returns current available capacity of the string. |
-| s.clear()    | clear the string.                                 |
-| s.empty()    | return true/false if the string is empty.         |
-| s.resize()   | change the size of the string.                    |
+| Function          | Description                                                    |
+| ----------------- | -------------------------------------------------------------- |
+| \*s.size()        | returns the size of the string.                                |
+| s.max_size()      | returns the maximum size that string can hold.                 |
+| s.capacity()      | returns current available capacity of the string.              |
+| \*s.clear()       | clear the string.                                              |
+| \*s.empty()       | return true/false if the string is empty.                      |
+| \*s.resize(n)     | decrease the size of the string to n.                          |
+| \*s.resize(n,'X') | increase the size of the string to n and put value 'X' after n |
 
 ### Element access
 
-| Function  | Description                             |
-| --------- | --------------------------------------- |
-| S[i]      | access the ith index of the string.     |
-| s.at(i)   | access the ith index of the string.     |
-| s.back()  | access the last element of the string.  |
-| s.front() | access the first element of the string. |
+| Function   | Description                                                   |
+| ---------- | ------------------------------------------------------------- |
+| \*s[i]     | access the ith index of the string.                           |
+| s.at(i)    | access the ith index of the string.                           |
+| \*s.back() | access the last element of the string.(same as s[s.size()-1]) |
+| s.front()  | access the first element of the string.(same as s[0])         |
 
 ### Modifiers
 
-| Function                      | Description                              |
-| ----------------------------- | ---------------------------------------- |
-| s+= -> append another string. |
-| s.append()                    | append another string.                   |
-| s.push_back()                 | add character to the last of the string. |
-| s.pop_back()                  | remove the last character of the string. |
-| s=                            | assign string.                           |
-| s.assign()                    | assign string.                           |
-| s.erase()                     | erase characters from the string.        |
-| s.replace()                   | replace a portion of the string.         |
-| s.insert()                    | insert a portion to a specific position. |
+| Function        | Description                                       |
+| --------------- | ------------------------------------------------- |
+| \*s+=           | append another string.(addition)                  |
+| s.append()      | append another string.                            |
+| \*s.push_back() | add character to the last of the string.          |
+| \*s.pop_back()  | remove the last character of the string.          |
+| s=              | assign string.                                    |
+| s.assign()      | assign string.                                    |
+| \*s.erase(4)    | erase all characters after index 4.               |
+| \*s.erase(4, 3) | erase 3 characters from index 4.                  |
+| \* s.replace()  | replace a portion of the string.(erase + replace) |
+| s.insert()      | insert a portion to a specific position.          |
 
 ### Iterators
 
