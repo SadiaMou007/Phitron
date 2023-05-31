@@ -145,18 +145,19 @@ cout<<a<<*a //a--> memory address, *a-->10
 
 ### Modifiers
 
-| Function        | Description                                       |
-| --------------- | ------------------------------------------------- |
-| \*s+=           | append another string.(addition)                  |
-| s.append()      | append another string.                            |
-| \*s.push_back() | add character to the last of the string.          |
-| \*s.pop_back()  | remove the last character of the string.          |
-| s=              | assign string.                                    |
-| s.assign()      | assign string.                                    |
-| \*s.erase(4)    | erase all characters after index 4.               |
-| \*s.erase(4, 3) | erase 3 characters from index 4.                  |
-| \* s.replace()  | replace a portion of the string.(erase + replace) |
-| s.insert()      | insert a portion to a specific position.          |
+| Function                | Description                                       |
+| ----------------------- | ------------------------------------------------- |
+| \*s+=                   | append another string.(addition)                  |
+| s.append()              | append another string.                            |
+| \*s.push_back()         | add character to the last of the string.          |
+| \*s.pop_back()          | remove the last character of the string.          |
+| s=                      | assign string.                                    |
+| s.assign()              | assign string.                                    |
+| \*s.erase(4)            | erase all characters after index 4.               |
+| \*s.erase(4, 3)         | erase 3 characters from index 4.                  |
+| \* s.replace(4,3,"abc") | replace a portion of the string.(erase + replace) |
+| \* s.replace(4,0,"abc") | insert "abc" at index 4                           |
+| s.insert(4,"abc")       | same as s.replace(4,0,"abc")                      |
 
 ### Iterators
 
