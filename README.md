@@ -212,4 +212,8 @@ int main() {
 
 - [Vector build In functions](https://docs.google.com/document/d/1-AlWED5nChiMx4iqH_E-dCTgZn2EmzpB1THvfw-L7pM/edit)
 
-## Singely Linked list
+## Singely Linked list  
+## Doubly Linked list  
+- [List build In functions](https://docs.google.com/document/d/1ck7jVccsfKckkS9sB1BmE2COXRDvYOCEfIRX3Tu7SHQ/edit)
+  
+
