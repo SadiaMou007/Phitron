@@ -221,3 +221,13 @@ int main() {
 ## Stack
 
 - Abstract structure that works as container of array or linked list
+
+### push()
+
+### pop()
+
+### top()
+
+### empty()
+
+### size()
