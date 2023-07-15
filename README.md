@@ -218,16 +218,62 @@ int main() {
 
 - [List build In functions](https://docs.google.com/document/d/1ck7jVccsfKckkS9sB1BmE2COXRDvYOCEfIRX3Tu7SHQ/edit)
 
-## Stack
+## Stack (array & doubly linked list)
 
 - Abstract structure that works as container of array or linked list
+- Not used for singly linked list as it takes 0(n) time
 
-### push()
+### Stack using stl
 
-### pop()
+```
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    stack<int> st;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        st.push(x);
+    }
+    while (!st.empty())
+    {
+        cout << st.top() << endl;
+        st.pop();
+    }
+    return 0;
+}
+```
 
-### top()
+## Queue (singly & doubly linked list)
 
-### empty()
+- Abstract structure that works as container of linked list
+- Not used for array as it takes 0(n) time for insert/remove first element
 
-### size()
+### Queue using stl
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    stack<int> st;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        st.push(x);
+    }
+    while (!st.empty())
+    {
+        cout << st.top() << endl;
+        st.pop();
+    }
+    return 0;
+}
+```
