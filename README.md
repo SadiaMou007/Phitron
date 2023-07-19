@@ -251,7 +251,7 @@ int main()
 ## Queue (singly & doubly linked list)
 
 - Abstract structure that works as container of linked list
-- Not used for array as it takes 0(n) time for insert/remove first element
+- Not used for array as it takes 0(n) time for insert/remove first element[can use circular queue]
 
 ### Queue using stl
 
@@ -260,19 +260,20 @@ int main()
 using namespace std;
 int main()
 {
-    stack<int> st;
+    queue<int> q;
     int n;
     cin >> n;
     for (int i = 0; i < n; i++)
     {
         int x;
         cin >> x;
-        st.push(x);
+        q.push(x);
     }
-    while (!st.empty())
+    cout << q.size() << endl;
+    while (!q.empty())
     {
-        cout << st.top() << endl;
-        st.pop();
+        cout << q.front() << endl;
+        q.pop();
     }
     return 0;
 }
