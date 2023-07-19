@@ -4,30 +4,32 @@ using namespace std;
 int main() {
     int t;
     cin>>t;
+    queue<string> q;
+
     while(t--)
     {
-        queue<string> q;
         int isOut;
         cin>> isOut;
-        
+      
         if(isOut==0) 
         {
-              string s;
+             string s;
              cin >> s;
              q.push(s);
         }
         else if(isOut==1)
         {
-            cout<<q.front()<<endl;
-            if(!q.empty()) q.pop();
             
-        }
-        //  while(!q.empty())
-        // {
-        //     cout<<(q.front())<<" ";
-        //     q.pop();
-        // }
-       
+            if(q.empty()) {
+                cout<<"Invalid"<<endl;
+            }
+            else {
+                cout<<q.front()<<endl;
+                q.pop();
+            }
+            
+         }
+      
     }
 
     return 0;
