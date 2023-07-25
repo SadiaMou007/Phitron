@@ -278,3 +278,128 @@ int main()
     return 0;
 }
 ```
+
+## Binary Tree
+
+#### Node class
+
+```
+class Node {
+    public:
+      int val;
+      Node *left;
+      Node *right;
+    Node (int val)
+    {
+        this->val = val;
+        this->left = NULL;
+        this->right = NULL;
+    }
+};
+
+```
+
+#### Usages
+
+Observe binary search tree, decision tree, implement heap sort, compiler syntax tree making
+
+#### Traversing Order
+
+1.  <b>Depth wise</b>
+
+Pre Order: `root -> left -> right`
+
+```
+void preOrder (Node * root)
+{
+if(root == NULL) return;
+cout<<root->val<<" ";
+preOrder(root->left);
+preOrder(root->right);
+}
+```
+
+post order: `left -> right -> root`  
+in order: `left -> root -> right`
+
+2.  <b>Level wise</b> (for take input)
+
+### Input binary tree
+
+- create root node
+- input root to queue
+-
+
+```
+while (!q.empty())
+  1. take front node (p) then pop
+  2. create 2 node left and right and add as (p->left) and (p -> right)
+  3. push (p->left) and (p -> right) to queue
+
+```
+
+### Print binary tree
+
+```
+void level_order (Node * root)
+{
+    queue<Node*> q;
+    q.push(root);
+    while(!q.empty())
+    {
+      Node * f = q.front();
+      q.pop();
+      cout<< f->val<<" ";
+
+      if(f->left) q.push(f->left);
+      if(f->right) q.push(f->right);
+
+    }
+}
+```
+
+### Count number of node
+
+```
+int count(Node *root)
+{
+    if (root == NULL)
+        return 0;
+    int l = count(root->left);
+    int r = count(root->right);
+    return l + r + 1;
+}
+```
+
+### Count number of leaf node
+
+```
+int count_leaf(Node *root)
+{
+    if (root == NULL)
+        return 0;
+    if (root->left == NULL && root->right == NULL)
+    {
+        return 1;
+    }
+    else
+    {
+        int l = count_leaf(root->left);
+        int r = count_leaf(root->right);
+        return l + r;
+    }
+}
+```
+
+### Max height
+
+```
+int maxHeight(Node *root)
+{
+    if (root == NULL)
+        return 0;
+    int l = maxHeight(root->left);
+    int r = maxHeight(root->right);
+    return max(l, r) + 1;
+}
+```
