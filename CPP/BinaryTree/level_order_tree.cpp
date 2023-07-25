@@ -20,10 +20,14 @@ void level_order (Node * root)
     q.push(root);
     while(!q.empty())
     {
+      //1
       Node * f = q.front();
       q.pop();
+
+      //2
       cout<< f->val<<" ";
 
+      //3
       if(f->left) q.push(f->left);
       if(f->right) q.push(f->right);
 
