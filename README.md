@@ -403,3 +403,36 @@ int maxHeight(Node *root)
     return max(l, r) + 1;
 }
 ```
+
+### Search node [solution](https://www.codingninjas.com/studio/problems/code-find-a-node_5682)
+
+### Node Level [solution](https://www.codingninjas.com/studio/problems/node-level_920383?leftPanelTab=1)
+
+- initialize queue that store pair `queue<pair<TreeNode<int> *, int>> q;`
+- push root and level(1) `q.push({root, 1});`
+-
+
+```
+ while (!q.empty())
+    {
+        pair<TreeNode<int> *, int> pr = q.front();
+        TreeNode<int> *node = pr.first;
+        int level = pr.second;
+        q.pop();
+
+        if (node->val == searchedValue)  return level;
+        if (node->left) q.push({node->left, level + 1});
+        if (node->right) q.push({node->right, level + 1});
+
+    }
+```
+
+### Left view [solution](https://www.codingninjas.com/studio/problems/left-view-of-a-binary-tree_920519?leftPanelTab=1)
+
+### Diameter Of Binary Tree [solution](https://www.codingninjas.com/studio/problems/diameter-of-the-binary-tree_920552?leftPanelTab=1)
+
+- left max height + right max height
+
+### Special Binary Tree [solution](https://www.codingninjas.com/studio/problems/special-binary-tree_920502?leftPanelTab=1)
+
+- each node has 0 or 2 child
