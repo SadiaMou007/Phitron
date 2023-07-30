@@ -436,3 +436,27 @@ int maxHeight(Node *root)
 ### Special Binary Tree [solution](https://www.codingninjas.com/studio/problems/special-binary-tree_920502?leftPanelTab=1)
 
 - each node has 0 or 2 child
+
+### Univalued Binary Tree [solution](https://leetcode.com/problems/univalued-binary-tree/submissions/)
+
+### Pair Node and height
+
+```
+ queue<pair<Node *, int>> q;
+    q.push({root, 0});
+
+    vector<int> v;
+
+    while (!q.empty())
+    {
+        pair<Node *, int> pr = q.front();
+        Node *node = pr.first;
+        int level = pr.second;
+        q.pop();
+
+        if (level == s) v.push_back(node -> val);
+
+        if (node->left) q.push({node->left, level + 1});
+        if (node->right) q.push({node->right, level + 1});
+    }
+```
