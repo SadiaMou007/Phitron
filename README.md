@@ -444,9 +444,6 @@ int maxHeight(Node *root)
 ```
  queue<pair<Node *, int>> q;
     q.push({root, 0});
-
-    vector<int> v;
-
     while (!q.empty())
     {
         pair<Node *, int> pr = q.front();
@@ -460,3 +457,134 @@ int maxHeight(Node *root)
         if (node->right) q.push({node->right, level + 1});
     }
 ```
+
+## Binary Search Tree(BST) (has stl - Set)
+
+Complexity : O(height)  
+Condition:
+
+- node -> left < node
+- node -> right > node
+- Can't contain duplicate value (track duplicate count(frequency array) if required)
+
+### Search
+
+```
+bool search(Node *root, int x)
+{
+    if (root == NULL)  return false;
+    if (root->val == x) return true;
+    if (x < root->val) return search(root->left, x);
+    else return search(root->right, x);
+}
+```
+
+### Insert
+
+Complexity : O(height)
+
+Traverse left/right according current root and value (less/greater) until find NULL children then Insert
+
+```
+void insert(Node *&root, int x)
+{
+    if (root == NULL)
+    {
+        root = new Node(x);
+        return;
+    }
+    if (x < root->val)
+    {
+        if (root->left == NULL) root->left = new Node(x);
+        else insert(root->left, x);
+    }
+    else
+    {
+        if (root->right == NULL) root->right = new Node(x);
+        else insert(root->right, x);
+    }
+}
+```
+
+### Array to BST
+
+```
+Node *convert(int a[], int n, int l, int r)
+{
+    if (l > r)
+        return NULL;
+    int mid = (l + r) / 2;
+    Node *root = new Node(a[mid]);
+    Node *leftRoot = convert(a, n, l, mid - 1);
+    Node *rootRight = convert(a, n, mid + 1, r);
+    root->left = leftRoot;
+    root->right = rootRight;
+    return root;
+}
+```
+
+## Heap (has stl - Priority queue)
+
+### Perfect binary tree
+
+All node have 2 child except child
+
+- height : log(n)
+
+### Complete binary tree
+
+- Last level - 1: complete
+- Last level: filled up from left
+
+- height : log(n)
+
+#### Array representation
+
+- Take level order input
+- Parent to child : `(2n+1) left` and `(2n+2) right`th index, where n = parent index
+- Child to parent : `(n-1)/2`th index, where n = child index
+
+#### Heap
+
+- Complete binary tree array representation
+- complexity: log(n)
+- Max heap : children <= node
+- Min heap : children >= node
+
+### Insert
+
+```
+v.push_back(x);
+int cur_idx = v.size() - 1;
+while (cur_idx != 0)
+{
+    int parent_idx = (cur_idx - 1) / 2;
+    if (v[parent_idx] < v[cur_idx]) swap(v[parent_idx], v[cur_idx]);
+    else break;
+    cur_idx = parent_idx;
+}
+```
+
+[(`<` - max heap, `>` min heap)]
+
+### Delete
+
+- swap (root, last child)
+- delete last child
+- compare(until reach leaf node / (child root < root -> max heap) / (child root > root -> mean heap)) root with left and right root, swap with larger(max heap) / smaller(min heap) value
+
+## Priority Queue (Heap stl/ heap sort)
+
+- Complexity: `log(n)` for 1 element
+- Max heap `priority_queue<int> pq`
+- Min heap `priority_queue<int, vector<int>, greater<int>> pq`
+
+```
+pq.push(x); // O(logN)
+pq.pop(); // O(logN)
+cout << pq.top() << endl; // O(1)
+```
+
+## Map
+
+## Set (BST stl)
