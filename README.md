@@ -587,4 +587,33 @@ cout << pq.top() << endl; // O(1)
 
 ## Map
 
+- key (any type) value pair
+
 ## Set (BST stl)
+
+- keep unique values in assending order
+
+```
+set<int> s;
+    int n;
+    cin >> n;
+    while (n--)
+    {
+        int x;
+        cin >> x;
+        s.insert(x); // O(logN)
+    }
+```
+
+- iteration
+
+```
+for (auto it = s.begin(); it != s.end(); it++) cout << *it << endl;
+
+```
+
+- search `1000` from set `s` [O(logN)]
+
+```
+s.count(1000)
+```
